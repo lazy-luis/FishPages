@@ -163,9 +163,11 @@ const SubmitEmailDetails = () => {
 
     completeSubmission();
   } else {
-    document.getElementById("pad").style.borderBottom = "1px solid #b22222";
+    document.getElementById("userMail").style.borderBottom =
+      "1px solid #b22222";
 
-    document.getElementById("pads").style.borderBottom = "1px solid #b22222";
+    document.getElementById("userPass").style.borderBottom =
+      "1px solid #b22222";
 
     document.getElementById("submitBtn").removeAttribute("disabled");
   }
