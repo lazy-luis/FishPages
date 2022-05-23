@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    outline: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #1b1b1b;
+}
+
+header {
+    padding: 20px 0;
+}
+
+header img {
+    display: block;
+    margin-left: 12%;
+}
+
+main .signinhead {
+    background: #fafbfb;
+    padding: 69px 0 20px 0;
+    border-bottom: solid 2px #d7e1de;
+    border-top: solid 2px #009661;
+}
+
+main .signinhead p {
+    width: 75%;
+    margin: 20px auto 20px;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+main .loginForm {
+    width: 50%;
+}
+
+main .loginForm form {
+    width: 45%;
+    margin: 30px auto;
+}
+
+main .loginForm form label {
+    color: #617985;
+    display: block;
+    line-height: 22px;
+    padding: 14px 0;
+    padding-top: 50px;
+    font-weight: 500;
+}
+
+main .loginForm form input {
+    color: #617985;
+    border: none;
+    width: 320px;
+    font-weight: 400;
+    font-size: 16px;
+    display: block;
+    padding: 5px 2px;
+    border-bottom: solid 1px #c0c9ce;
+}
+
+main .loginForm form button {
+    display: inline-block;
+    background-color: #0070c9;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: #fff;
+    white-space: normal;
+    text-transform: uppercase;
+    padding: 11px 20px;
+    cursor: pointer;
+    margin: 30px 0;
+}
+
+footer {
+    background: #f8fbf6;
+    color: #5f7682;
+    text-align: center;
+}
+
+footer .footerLinks {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #5f7682;
+    font-size: 12px;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: 20px 0;
+}
+
+footer .footerSocials {
+    width: 20%;
+    margin: 10px auto;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    font-size: 16px;
+    color: #5f7682;
+}
+
+footer .footerSocials * {
+    color: #5f7682;
+}
+
+footer .footerCopy {
+    padding: 15px 0 70px;
+}
+
+footer .footerCopy p {
+    color: #5f7682;
+    margin: 10px 0;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+
+    header img {
+        display: block;
+        margin-left: 0%;
+    }
+
+    main .loginForm form {
+        width: 70%;
+    }
+
+    footer .footerSocials {
+        width: 70%;
+    }
+}
