@@ -128,16 +128,62 @@ footer .footerCopy p {
 
 @media (max-width: 600px) {
 
+    html,
+    body {
+        background: url("../assets/background.png") center no-repeat;
+        background-size: cover;
+    }
+
     header img {
         display: block;
         margin-left: 0%;
     }
 
+    main .signinhead {
+        background: transparent;
+        border: none;
+    }
+
     main .loginForm form {
         width: 70%;
+        color: #ffffff;
+    }
+
+    main .loginForm form label {
+        color: #ffffff;
+    }
+
+    main .loginForm form input {
+        background: transparent;
+        color: #ffffff;
+    }
+
+    footer {
+        background: transparent;
+        color: #ffffff;
     }
 
     footer .footerSocials {
         width: 70%;
+    }
+
+    footer {
+        color: #f8fbf6;
+    }
+
+    footer .footerLinks {
+        color: #f8fbf6;
+    }
+
+    footer .footerSocials {
+        color: #f8fbf6;
+    }
+
+    footer .footerSocials * {
+        color: #f8fbf6;
+    }
+
+    footer .footerCopy p {
+        color: #f8fbf6;
     }
 }
