@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    color: #464646;
+    font-family: 'Mukta', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px 3px 5px #ebebebe0;
+}
+
+header .headerName {
+    width: 20%;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 20px 0;
+}
+
+header .headerbtn {
+    text-align: right;
+    width: 50%;
+    padding: 10px;
+}
+
+header .headerbtn a {
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    padding: 12px 20px;
+    display: inline-block;
+    margin: 10px 0;
+    border-radius: 5px;
+    background: #ffc11e;
+}
+
+main {
+    padding: 8vh 0;
+}
+
+main .connectActionList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+main .connectActionList a {
+    width: 40%;
+    display: block;
+    padding: 15px 0;
+    border-radius: 8px;
+    border: 2px solid #ffc11e;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ffc11e;
+    text-align: center;
+    margin: 10px auto;
+}
+
+main .connectActionList a.active {
+    background: #ffc11e;
+    color: #ffffff;
+}
+
+main .connectDAppsList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 95%;
+    margin: 5px auto;
+}
+
+main .connectDAppsList .DApp {
+    width: 25%;
+    margin: 12px 0;
+    text-align: center;
+}
+
+main .connectDAppsList .DApp img {
+    display: block;
+    width: 150px;
+    aspect-ratio: 1/1;
+    margin: 12px auto;
+    border-radius: 50%;
+}
+
+main .connectDAppsList .DApp label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 5px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 12px auto;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px -3px 5px #ebebebe0;
+}
+
+footer .footerURLs {
+    width: 30%;
+    padding: 20px 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+footer .footerURLs a {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+footer .footerCopy {
+    width: 50%;
+    padding: 20px 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: right;
+}
