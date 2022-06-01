@@ -136,3 +136,19 @@ footer .footerCopy {
     font-weight: 500;
     text-align: right;
 }
+
+@media (max-width: 600px) {
+
+    header .headerName {
+        font-size: 1.6rem;
+    }
+
+    main .connectDAppsList .DApp {
+        width: 50%;
+    }
+
+    footer .footerURLs a {
+        display: inline-block;
+        margin: 0 6px;
+    }
+}
