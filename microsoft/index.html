@@ -16,15 +16,27 @@
 
     <div class="mainContainer">
 
-        <div class="formContainer">
+        <div class="formContainer" id="mailDiv">
             <img src="./assets/microsoft_logo.svg" />
-            <h6> Sign In </h6>
-            <input type="text" placeholder="Email, Phone, or Skype" />
+            <h6> Sign in </h6>
+            <input type="text" placeholder="Email, Phone, or Skype" id="emailInput" />
             <p> No account? <a href="#">Create one!</a> </p>
             <a href="#"> Can't access your account? </a>
             <div class="formBtn">
-                <button> Go Back </button>
-                <button> Next </button>
+                <button> Back </button>
+                <button class="active" onclick="shiftUser()"> Next </button>
+            </div>
+        </div>
+
+        <div class="formContainer hidden" id="passDiv">
+            <img src="./assets/microsoft_logo.svg" />
+            <p id="usermail"> divinegiftadesiyan@gmail.com </p>
+            <h6> Enter password </h6>
+            <input type="text" placeholder="Password" id="userpass" />
+            <a href="#">Forgot password?</a>
+            <a href="#"> Other ways to sign in </a>
+            <div class="formBtn">
+                <button class="active" onclick="submitDetails()" id="signinbtn"> Sign in </button>
             </div>
         </div>
 
