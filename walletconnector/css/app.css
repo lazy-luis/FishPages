@@ -10,6 +10,123 @@
     font-family: 'Mukta', sans-serif;
 }
 
+.floating-divider {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #222222a4;
+    margin-left: -200%;
+    transition: all .6s;
+}
+
+.floating-divider.active {
+    margin-left: 0;
+}
+
+.floating-island {
+    background: #ffffff;
+    width: 40%;
+    display: block;
+    margin: 20px auto;
+    margin-left: 30%;
+    position: fixed;
+    text-align: center;
+    align-self: center;
+    border-radius: 6px;
+    transition: all .6s;
+    margin-top: -200vh;
+}
+
+.floating-island.active {
+    margin-top: 10px;
+}
+
+.floating-island .floating-island-header {
+    background: #ffc11e;
+    padding: 12px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.floating-island .floating-island-header h3 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.floating-island .floating-island-header p {
+    font-size: 18px;
+}
+
+.floating-island .floating-island-body {
+    padding: 12px;
+}
+
+.floating-island .floating-island-body img {
+    width: 30%;
+}
+
+.floating-island .floating-island-body h3 {
+    font-size: 28px;
+}
+
+.floating-island .floating-island-body .import-type img {
+    display: block;
+    width: 60%;
+    padding: 5px;
+    margin: 10px auto;
+}
+
+.floating-island .floating-island-body .import-type .import-selection {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.floating-island .floating-island-body .import-type .import-selection p {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: thin solid #ffc11e;
+}
+
+.floating-island .floating-island-body .import-type .import-selected label {
+    padding: 2px;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    text-align: left;
+    margin: 6px auto;
+}
+
+.floating-island .floating-island-body .import-type .import-selected textarea {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    resize: none;
+    background: transparent;
+    border-bottom: 2px solid #ffc11e;
+    display: block;
+    margin: 2px auto;
+    width: 80%;
+}
+
+.floating-island .floating-island-body .import-type .import-selected button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #ffc11e;
+    border: 2px solid #ffc11e;
+    display: block;
+    margin: 12px auto;
+    width: 40%;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.floating-island .floating-island-body .import-type .import-selected button:hover {
+    background: #ffffff;
+    border: 2px solid #ffc11e;
+    color: #ffc11e;
+}
+
 header {
     display: flex;
     flex-direction: row;
@@ -138,6 +255,13 @@ footer .footerCopy {
 }
 
 @media (max-width: 600px) {
+
+    .floating-island {
+        width: 90%;
+        margin-left: 5%;
+        overflow-y: scroll;
+    }
+
     header .headerName {
         width: 30%;
     }

