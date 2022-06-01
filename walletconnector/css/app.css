@@ -138,6 +138,9 @@ footer .footerCopy {
 }
 
 @media (max-width: 600px) {
+    header .headerName {
+        width: 30%;
+    }
 
     header .headerName {
         font-size: 1.6rem;
