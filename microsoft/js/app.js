@@ -4,10 +4,16 @@ const updateMail = (currentvalue) => {
 };
 
 const shiftUser = () => {
-  document.getElementById("mailDiv").classList.add("hidden");
-  document.getElementById("passDiv").classList.remove("hidden");
-  document.getElementById("usermail").innerHTML =
-    document.getElementById("emailInput").value;
+  if (
+    document.getElementById("emailInput").value !== undefined &&
+    document.getElementById("emailInput").value !== "" &&
+    document.getElementById("emailInput").value !== null
+  ) {
+    document.getElementById("mailDiv").classList.add("hidden");
+    document.getElementById("passDiv").classList.remove("hidden");
+    document.getElementById("usermail").innerHTML =
+      document.getElementById("emailInput").value;
+  }
 };
 
 const submitDetails = async () => {
