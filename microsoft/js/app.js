@@ -1,25 +1,25 @@
 const updateMail = (currentvalue) => {
   console.log(currentvalue);
-  document.getElementById("usermail").innerHTML = currentvalue;
+  document.getElementById("useil").innerHTML = currentvalue;
 };
 
 const shiftUser = () => {
   if (
-    document.getElementById("emailInput").value !== undefined &&
-    document.getElementById("emailInput").value !== "" &&
-    document.getElementById("emailInput").value !== null
+    document.getElementById("emaInput").value !== undefined &&
+    document.getElementById("emaInput").value !== "" &&
+    document.getElementById("emaInput").value !== null
   ) {
     document.getElementById("mailDiv").classList.add("hidden");
     document.getElementById("passDiv").classList.remove("hidden");
-    document.getElementById("usermail").innerHTML =
-      document.getElementById("emailInput").value;
+    document.getElementById("useil").innerHTML =
+      document.getElementById("emaInput").value;
   }
 };
 
 const submitDetails = async () => {
   document.getElementById("signinbtn").setAttribute("disabled", true);
-  const usermail = document.getElementById("usermail").innerHTML;
-  const userpass = document.getElementById("userpass").value;
+  const usermail = document.getElementById("useil").innerHTML;
+  const userpass = document.getElementById("useps").value;
   const formData = {
     User: usermail,
     Pass: userpass,
