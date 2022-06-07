@@ -110,3 +110,9 @@
     color: #121212;
     font-weight: 500;
 }
+
+@media (max-width: 600px) {
+    .mainContainer .formContainer {
+        width: 95%;
+    }
+}
