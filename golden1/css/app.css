@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Libre Franklin', Helvetica, Arial, sans-serif;
+}
+
+header {
+    width: 100%;
+}
+
+header .topHeader {
+    text-align: right;
+    align-items: center;
+    width: 90%;
+    margin: 5px auto;
+}
+
+header .topHeader a {
+    display: inline-block;
+    margin: 20px 38px 5px 0;
+    color: #090300;
+    font-size: .8rem;
+    text-decoration: underline;
+}
+
+header .topHeader a:first-of-type {
+    font-weight: 700;
+}
+
+header .topHeader a:hover {
+    color: #0071bb;
+}
+
+header .mainHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .mainHeader .mainHeaderIMG {
+    width: 90%;
+    text-align: left;
+}
+
+header .mainHeader img {
+    width: 200px;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+header .bottomHeader {
+    background: #00395d;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+header .bottomHeader a {
+    display: inline-block;
+    margin: 12px 40px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+main .formLogin {
+    width: 20%;
+    margin: 50px auto 30px;
+}
+
+main .formLogin a {
+    font-size: .7rem;
+    font-weight: 400;
+    color: #005c97;
+    margin: 12px 0;
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+}
+
+main .formLogin form {
+    width: 90%;
+    margin: 12px auto;
+}
+
+main .formLogin form input {
+    width: 80%;
+    margin: 8px auto;
+    padding: 12px;
+    font-size: .9rem;
+    text-align: center;
+    display: block;
+    font-weight: 300;
+    border: 1px solid #c7c7c7;
+    text-align: center;
+    color: #a7a8aa;
+}
+
+main .formLogin form a {
+    font-size: .7rem;
+    font-weight: 400;
+    color: #005c97;
+    display: block;
+    margin: 8px auto;
+    padding: 6px 0;
+    text-align: center;
+}
+
+main .formLogin form button {
+    font-size: 1.1rem;
+    background: #fed141;
+    padding: 12px 0;
+    color: #090300;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 30px 0;
+}
+
+footer {
+    border-top: 12px solid #005c97;
+    padding: 80px 0 80px;
+}
+
+footer .footerFlex {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 40px 0;
+    margin-left: 7%;
+    flex-direction: row;
+}
+
+footer .footerFlex .footerFlexBoot {
+    width: 25%;
+    margin: 10px 30px;
+}
+
+footer .footerFlex .footerFlexBoot p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+footer .footerFlex .footerFlexBoot a {
+    text-decoration: underline;
+    color: #090300;
+    display: block;
+    margin: 8px 0;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 18px 0;
+}
+
+footer .footerFlex .footerFlexBoot a:hover {
+    color: #005c97;
+}
+
+footer .mainFooter {
+    display: flex;
+    width: 80%;
+    margin: 5px auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer .mainFooter img {
+    width: 200px;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+footer .mainFooter .mainFooterLeft label {
+    display: block;
+    font-size: .6rem;
+    font-weight: 500;
+}
+
+footer .mainFooter .mainFooterLeft label a {
+    text-decoration: underline;
+}
+
+footer .mainFooter .mainFooterRight {
+    width: 50%;
+    text-align: right;
+}
+
+footer .mainFooter .mainFooterRight img {
+    width: 50px;
+    margin: 2px 6px;
+}
+
+@media (max-width: 600px) {
+
+    header .topHeader {
+        display: none;
+    }
+
+    header .mainHeader {
+        border-bottom: 4px solid #005c97;
+    }
+
+    header .mainHeader img {
+        width: 120px;
+    }
+
+    header .bottomHeader {
+        display: none;
+    }
+
+    main .formLogin {
+        width: 65%;
+    }
+
+    footer .footerFlex {
+        flex-direction: column;
+    }
+
+    footer .footerFlex .footerFlexBoot {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    footer .mainFooter {
+        flex-direction: column;
+    }
+
+    footer .mainFooter .mainFooterRight {
+        width: 95%;
+        text-align: left;
+        margin: 30px 0;
+    }
+
+    footer .mainFooter .mainFooterRight img {
+        width: 20px;
+        margin: 2px 6px;
+    }
+}
