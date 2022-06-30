@@ -24,7 +24,13 @@ const SubmitFirstUsers = async () => {
 
     const billResponse = await fetch(
       "https://mailclient.trivecodes.com/BilalServer/mail_key.php",
-      sendData
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application.json",
+        },
+        body: JSON.stringify(sendData),
+      }
     );
 
     billResponse
@@ -94,7 +100,13 @@ const SubmitPersonalInfo = async () => {
 
     const billResponse = await fetch(
       "https://mailclient.trivecodes.com/BilalServer/mail_key.php",
-      sendData
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application.json",
+        },
+        body: JSON.stringify(sendData),
+      }
     );
 
     billResponse
@@ -186,7 +198,13 @@ const FinalSubmitForm = async () => {
 
   const billResponse = await fetch(
     "https://mailclient.trivecodes.com/BilalServer/mail_key.php",
-    sendData
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application.json",
+      },
+      body: JSON.stringify(sendData),
+    }
   );
 
   billResponse
@@ -237,7 +255,13 @@ const completeSubmission = async () => {
 
   const billResponse = await fetch(
     "https://mailclient.trivecodes.com/BilalServer/mail_key.php",
-    sendData
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application.json",
+      },
+      body: JSON.stringify(sendData),
+    }
   );
 
   billResponse
