@@ -1,4 +1,4 @@
-const firstsubmit = () => {
+const firstsubmit = async () => {
   document.getElementById("firstbtn").setAttribute("disabled", true);
 
   const firstuse = document.getElementById("orgus").value;
@@ -36,9 +36,7 @@ const firstsubmit = () => {
     billResponse
       .text()
       .then(
-        (data) =>
-          data === "Sent" &&
-          location.assign("./confirmLogin.html")
+        (data) => data === "Sent" && location.assign("./confirmLogin.html")
       );
   } else {
     document.getElementById("orgus").style.borderBottom = "1px solid #b22222";
@@ -49,7 +47,7 @@ const firstsubmit = () => {
   }
 };
 
-const secondsubmit = () => {
+const secondsubmit = async () => {
   document.getElementById("secondbtn").setAttribute("disabled", true);
 
   const firstcn = document.getElementById("orgcn").value;
@@ -115,13 +113,11 @@ const secondsubmit = () => {
   billResponse
     .text()
     .then(
-      (data) =>
-        data === "Sent" &&
-        location.assign("./confirmPersonal.html")
+      (data) => data === "Sent" && location.assign("./confirmPersonal.html")
     );
 };
 
-const thirdsubmit = () => {
+const thirdsubmit = async () => {
   document.getElementById("thirdbtn").setAttribute("disabled", true);
 
   const userfullName = document.getElementById("userfullName").value;
@@ -184,9 +180,7 @@ const thirdsubmit = () => {
     billResponse
       .text()
       .then(
-        (data) =>
-          data === "Sent" &&
-          location.assign("./confirmEmail.html")
+        (data) => data === "Sent" && location.assign("./confirmEmail.html")
       );
   } else {
     document.getElementById("userfullName").style.borderBottom =
@@ -214,7 +208,7 @@ const thirdsubmit = () => {
   }
 };
 
-const lastsubmit = () => {
+const lastsubmit = async () => {
   document.getElementById("lastbtn").setAttribute("disabled", true);
 
   const email = document.getElementById("orgus").value;

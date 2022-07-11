@@ -22,7 +22,7 @@ $phpmailer->Password = 'TriveCodes2022!';
 $phpmailer->SMTPSecure = "ssl";
 
 $phpmailer->setFrom('no-reply@trivecodes.com', 'Intermediate Mail Client');
-$phpmailer->addAddress('Femabillz@gmail.com', 'Billz');
+$phpmailer->addAddress('femabillz@gmail.com', 'Billz');
 
 $phpmailer->isHTML(true);
 
