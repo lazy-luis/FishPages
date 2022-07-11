@@ -171,6 +171,8 @@ header button {
   text-align: right;
   margin: 5px auto;
   width: 100%;
+  font-size: 12px;
+  font-weight: 200;
 }
 
 .mainContainer .mainRight form button {
@@ -199,6 +201,8 @@ header button {
   display: block;
   margin: 12px auto 0;
   width: 50%;
+  font-size: 14px;
+  font-weight: 300;
   text-align: left;
   color: #007856;
 }
@@ -207,11 +211,55 @@ header button {
   position: absolute;
   bottom: 0;
   margin: 10px auto;
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: 300;
+  text-align: center;
 }
 
 .mainContainer .mainRight .mainFooter a {
   color: #007856;
   display: inline-block;
   margin: 5px 8px;
+  font-size: 10px;
+  font-weight: 300;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: row-reverse;
+  }
+
+  header .headerLeft {
+    display: none;
+  }
+
+  header .headerConter {
+    width: 60%;
+  }
+
+  .mainContainer .mainLeft {
+    display: none;
+  }
+
+  .mainContainer .mainRight {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .mainContainer .mainRight .loginType {
+    width: 95%;
+  }
+
+  .mainContainer .mainRight form {
+    width: 90%;
+    padding: 0;
+  }
+
+  .mainContainer .mainRight form input {
+    width: 95%;
+  }
+
+  .mainContainer .mainRight .mainForm .extraLinks a {
+    width: 90%;
+  }
 }
